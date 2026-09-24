@@ -1,0 +1,9 @@
+# Hanzo CI/CD for hanzoai/nginx: .github/workflows/cicd.yml imports hanzoai/ci,
+# which reads this file. The build door builds each image, one BuildKit Job
+# per platform.
+images:
+  - name: nginx
+    context: .
+    dockerfile: Dockerfile
+    repo: ghcr.io/hanzoai/nginx
+    platforms: [linux/amd64]
